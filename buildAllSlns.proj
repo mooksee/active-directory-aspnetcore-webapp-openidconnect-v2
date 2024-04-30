@@ -13,6 +13,6 @@
   </Target>
   <!-- Specify the 'Publish' target with the appropriate properties -->
   <Target Name="Publish" DependsOnTargets="Build">
-    <MSBuild Projects="@(Solution)" Targets="Publish" Properties="Configuration=Release" />
+    <MSBuild Projects="@(Solution)" Targets="Publish" Properties="Configuration=Release;TargetFramework=net8.0" />
   </Target>
 </Project>
