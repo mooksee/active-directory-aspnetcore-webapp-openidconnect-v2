@@ -11,4 +11,7 @@
   <Target Name="clean">
     <MSBuild Projects="@(Solution)" Targets="clean" />
   </Target>
+  <Target Name="Publish">
+    <MSBuild Projects="@(Solution)" Targets="Publish" />
+  </Target>
 </Project>
