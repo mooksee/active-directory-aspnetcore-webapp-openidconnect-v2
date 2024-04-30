@@ -11,7 +11,8 @@
   <Target Name="clean">
     <MSBuild Projects="@(Solution)" Targets="clean" />
   </Target>
-  <Target Name="Publish">
-    <MSBuild Projects="@(Solution)" Targets="Publish" />
+  <!-- Specify the 'Publish' target with the appropriate properties -->
+  <Target Name="Publish" DependsOnTargets="Build">
+    <MSBuild Projects="@(Solution)" Targets="Publish" Properties="Configuration=Release" />
   </Target>
 </Project>
